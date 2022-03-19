@@ -1,0 +1,94 @@
+@charset "utf-8";
+body{
+    background-image: url(./hatter.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+#galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.kepek{
+    width: 80%;
+}
+img{
+    width: 100%;
+}
+header,nav,aside,article,footer, main{
+    border: 1px solid gray;
+    padding: 10px;
+}
+main{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "h h"
+    "n n"
+    "ar ar"
+    "f f";
+	
+	margin: 0px 100px;
+}
+header{grid-area:h;}
+nav{grid-area: n;
+    border: 0px; 
+    padding: 0px; 
+    margin: 0px;}
+article{grid-area:ar ;}
+footer{grid-area: f;
+text-align: center;}
+nav a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+nav ul {
+    padding-left: 0px;
+    padding-right: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+	list-style-type: none;
+    padding: 5px 0px ;
+}
+nav a:hover{
+    text-decoration: none;
+    color:black
+}
+
+.divekFormazasa{
+    border: 10px dashed gray;
+    padding: 10px;
+    background-color: green;
+
+}
+
+
+@media screen and (max-width: 400px){ /*400px alatt milyen legyen a kinézet.*/
+	main{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "h "
+    "n "
+    "ar"
+    "f";
+    }
+    nav ul {
+        padding-left: 0px;
+        padding-right: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2px;
+        list-style-type: none;
+        padding: 5px 0px ;
+    }
+    #galeria{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+	
+	
+} 
